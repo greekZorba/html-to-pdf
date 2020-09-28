@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>html을 pdf로 바꿔보기</title>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <meta charset='UTF-8'/>
+    <meta content='Content-type: text/html; charset=UTF-8' name='http-equiv'/>
+    <meta content='IE=Edge,chrome=1' http-equiv='X-UA-Compatible'/>
+    <meta content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no'
+          name='viewport'/>
+    <link href="/css/bootstrap.min.css" media="screen" rel="stylesheet"/>
+    <style>
+        body {
+            color: #555;
+            padding: 0px;
+            font-family: "NanumBarunGothic"
+        }
+
+        .main {
+            margin: auto;
+            padding: 15px;
+            border-radius: 1px;
+        }
+
+        .logo-image {
+            width: 40%;
+            max-width: 300px;
+            float: right;
+        }
+
+        .main h1 {
+            margin: 100px 0 10px 15px;
+            width: 100%;
+            font-size: 35px;
+        }
+
+        .info-box {
+            margin-top: 40px;
+            padding-right: 15px;
+        }
+
+        .info {
+            width: 100%;
+            margin-left: 15px;
+        }
+
+        .title {
+            font-weight: lighter;
+            color: #42A5F5;
+            vertical-align: top;
+            font-size: 17px;
+        }
+
+        .description {
+            vertical-align: top;
+            font-size: 13px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container main">
+    <h1>귀여운 펭수</h1>
+    <img class="logo-image" src="/image/cutty_peng.png"/>
+    
+    <div class="info-box">
+        <div class="info">
+            <h2 class="title">이름</h2>
+            <p class="description" th:text="${name}"/>
+        </div>
+
+        <div class="info">
+            <h2 class="title">나이</h2>
+            <p class="description" th:text="${age}"/>
+        </div>
+
+        <div class="info">
+            <h2 class="title">직업</h2>
+            <p class="description" th:text="${job}"/>
+        </div>
+
+        <div class="info">
+            <h2 class="title">거주지</h2>
+            <p class="description" th:text="${address}"/>
+        </div>
+    </div>
+</div>
+</body>
+</html>
